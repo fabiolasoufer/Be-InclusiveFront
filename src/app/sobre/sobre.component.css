@@ -1,0 +1,11 @@
+#img-bg {
+    /* background-image: url('../../assets/img/'); = pra voltar na pasta assets e ir pegar a img na pasta /img */
+
+    background-image: url('https://www.oswaldocruz.com/site/images/artigos/amor_ao_proximo_saude.jpg');
+
+    /* min-height: 100vh; */
+    max-height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
