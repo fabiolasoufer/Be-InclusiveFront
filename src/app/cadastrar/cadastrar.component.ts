@@ -15,7 +15,7 @@ export class CadastrarComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private route: Router
 
   ) { }
 
@@ -31,6 +31,7 @@ export class CadastrarComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
+
   cadastrar() {
     this.usuario.categoria = this.tipoUsuario
 
@@ -41,7 +42,7 @@ export class CadastrarComponent implements OnInit {
       console.log(this.usuario)
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
-        this.router.navigate(['/entrar'])
+        this.route.navigate(['/entrar'])
         alert('Usuário cadastrado com sucesso!')
       })
     }

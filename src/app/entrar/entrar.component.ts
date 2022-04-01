@@ -15,7 +15,7 @@ export class EntrarComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private route: Router
   ) { }
 
   ngOnInit() {
@@ -30,7 +30,7 @@ export class EntrarComponent implements OnInit {
         environment.nome = this.usuarioLogin.nome
         environment.foto = this.usuarioLogin.foto
         environment.id = this.usuarioLogin.id
-        this.router.navigate(['/inicio'])
+        this.route.navigate(['/inicio'])
       },
 
       error: erro => {
