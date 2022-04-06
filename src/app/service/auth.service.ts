@@ -33,7 +33,7 @@ cadastrar( usuario: Usuario): Observable<Usuario>{
 }
 
 getByIdUsuario(id: number): Observable<Usuario>{
-  return this.http.get<Usuario>(`https://projetobeinclusive.herokuapp.com/usuarios/${id}`)
+  return this.http.get<Usuario>(`https://projetobeinclusive.herokuapp.com/usuarios/${id}`, this.token)
 }
 
 
