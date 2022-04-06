@@ -28,7 +28,7 @@ export class PostagemService {
   }
 
   getByIdPostagem(id:number): Observable<PostagemModel>{
-    return this.http.get<PostagemModel>(`https://projetobeinclusive.herokuapp.com/${id}`, this.token)
+    return this.http.get<PostagemModel>(`https://projetobeinclusive.herokuapp.com/postagens/${id}`, this.token)
   }
 
   postPostagem(postagem: PostagemModel): Observable<PostagemModel>{

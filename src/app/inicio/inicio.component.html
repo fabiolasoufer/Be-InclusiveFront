@@ -43,7 +43,7 @@
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <small class="text-muted"> Tema: {{item.tema.avaliacao}}</small>
                 <p class="card-text mt-3">{{item.descricao}}</p>
-                <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
                 <p class="card-text"><small class="text-muted">{{item.usuario.nome}}</small></p>
               </div>
             </div>
@@ -57,7 +57,7 @@
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <small class="text-muted"> Tema: {{item.tema.avaliacao}}</small>
                 <p class="card-text mt-3">{{item.descricao}}</p>
-                <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
                 <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
                 <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
 
@@ -70,10 +70,10 @@
           <div class="card-columns" *ngFor='let tema of listaTemas'>
             <div class="card text-center" *ngFor='let item of tema.postagem'>
               <div class="card-body">
-                <h5 class="card-title m-0">{{item.titulo}}</h5>                
+                <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <p class="card-text mt-3">{{item.descricao}}</p>
-                <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
-                <p class="card-text"><small class="text-muted">{{item.usuario.nome}}</small></p>                
+                <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted">{{item.usuario.nome}}</small></p>
               </div>
             </div>
           </div>
@@ -98,18 +98,18 @@
              <input [(ngModel)]='postagem.titulo'
              type="text" class="form-control" id="titulo" placeholder="Digite o título">
          </div>
-        
+
                 <div class="form-group">
                 <label for="texto">Texto</label>
                 <textarea [(ngModel)]='postagem.descricao'
                 class="form-control" name="texto" id="texto" rows="3"></textarea>
             </div>
-          
+
 
 
            <div class="form-group">
             <label for="tema">Escolha um tema ou <a data-dismiss="modal" routerLink='/tema'> cadastre um novo</a>: </label>
-          
+
             <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
               <option *ngFor='let item of listaTemas' value="{{item.id}}">
                 {{item.avaliacao}}
