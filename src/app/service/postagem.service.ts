@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { Postagem } from '../model/Postagem';
+import { PostagemModel } from '../models/PostagemModel';
 
 @Injectable({
   providedIn: 'root'
@@ -23,24 +23,24 @@ export class PostagemService {
     }
   }
 
-  getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('https://projetobeinclusive.herokuapp.com/postagens', this.token)
+  getAllPostagens(): Observable<PostagemModel[]>{
+    return this.http.get<PostagemModel[]>('https://projetobeinclusive.herokuapp.com/postagens', this.token)
   }
 
-  getByIdPostagem(id:number): Observable<Postagem>{
-    return this.http.get<Postagem>(`https://projetobeinclusive.herokuapp.com/${id}`, this.token)
+  getByIdPostagem(id:number): Observable<PostagemModel>{
+    return this.http.get<PostagemModel>(`https://projetobeinclusive.herokuapp.com/${id}`, this.token)
   }
 
-  postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('https://projetobeinclusive.herokuapp.com/postagens', postagem, this.token)
+  postPostagem(postagem: PostagemModel): Observable<PostagemModel>{
+    return this.http.post<PostagemModel>('https://projetobeinclusive.herokuapp.com/postagens', postagem, this.token)
   }
 
-  putPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.put<Postagem>('https://projetobeinclusive.herokuapp.com/postagens', postagem, this.token)
+  putPostagem(postagem: PostagemModel): Observable<PostagemModel>{
+    return this.http.put<PostagemModel>('https://projetobeinclusive.herokuapp.com/postagens', postagem, this.token)
   }
 
   deletePostagem(id:number){
-    return this.http.delete<Postagem>(`https://projetobeinclusive.herokuapp.com/postagens/${id}`, this.token)
+    return this.http.delete<PostagemModel>(`https://projetobeinclusive.herokuapp.com/postagens/${id}`, this.token)
   }
 }
 
