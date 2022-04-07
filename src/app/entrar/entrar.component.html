@@ -1,4 +1,4 @@
-<div class="container-fluid ">
+<!-- <div class="container-fluid ">
     <div class="row align-items-center">
 
         <div class="col-md-6">
@@ -32,10 +32,82 @@
         </div>
 
 
-        <div class="col-md-6" id="img-bg">
+        <div class="col-md-6 img-bg vw-100" id="img-bg">
             <img src="https://loremflickr.com/cache/resized/65535_51396790585_f129784a78_h_1280_720_nofilter.jpg" alt="imagem-fundo">
         </div>
 
 
+    </div> -->
+<div class="container-fluid mt-5 mb-3">
+    <div class="row col-md-12 d-flex justify-content-center">
+        <h1 class="text-center title-beInc">BE INCLUSIVE</h1>
     </div>
 </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-color-beInc">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre nós</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Como funciona?</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contato</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+        <a class="btn btn-primary my-2 my-sm-0 mr-sm-2" routerLink="/cadastrar" data-dismiss="modal" href="#" role="button">Cadastre-se</a>
+        <!-- Button trigger modal -->
+      <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalEntrar">
+        Entrar
+      </button>      
+    </form>
+  </div>
+</nav>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modalEntrar" tabindex="-1" aria-labelledby="modalEntrarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEntrarLabel">Entrar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <input [(ngModel)]='usuarioLogin.email' class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input [(ngModel)]='usuarioLogin.senha' class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class=" btn btn-success" (click)='entrar()' data-dismiss="modal">Entrar</button>
+            </div>
+
+            <hr class="mt-5 mb-5">
+
+            <p class="text-center">
+                Não tem uma conta? <a routerLink="/cadastrar" data-dismiss="modal">Cadastre-se</a></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+<!-- </div> -->
+
+
