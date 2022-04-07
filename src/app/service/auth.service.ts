@@ -31,6 +31,10 @@ export class AuthService {
 cadastrar( usuario: Usuario): Observable<Usuario>{
   return this.http.post<Usuario>('https://projetobeinclusive.herokuapp.com/usuarios/cadastrar', usuario)
 }
+atualizarUsuario(usuario: Usuario): Observable<Usuario>{
+  return this.http.put<Usuario>('https://projetobeinclusive.herokuapp.com/usuarios/atualizar', usuario, this.token)
+}
+
 
 getByIdUsuario(id: number): Observable<Usuario>{
   return this.http.get<Usuario>(`https://projetobeinclusive.herokuapp.com/usuarios/${id}`, this.token)

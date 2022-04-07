@@ -25,13 +25,28 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Mensagens</a>
         </li>
+        <li class="nav-item pl-3">
+          <a [routerLink]="['/usuario-edit', idUsuario]">
+            <p class="text-dark fs-16 m-4">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </p>
+          </a>
+        </li>
   
+       
+        
         
       </ul>
   
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Procurar</button> 
+        <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Procurar</button>       
       </form>
+
+      <ul class="navbar-nav ml-auto d-flex align-items-center">
+        <li class="nav-item pl-3">
+          <a (click)="sair()" class="m-0 font-weight-bold text-dark fs-16">Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+        </li>
+      </ul>
     </div>
   </nav>
