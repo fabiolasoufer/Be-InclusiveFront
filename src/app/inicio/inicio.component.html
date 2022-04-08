@@ -281,10 +281,19 @@ Navegador
         <div class="card-header bg-top text-beInc font-weight-bold">
           Conteúdo
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item text-beInc">Todas as Postagens</li>
-          <li class="list-group-item text-beInc">Minhas Postagens</li>          
-        </ul>
+
+
+          <div class="list-group">
+            <a href="#getAllPostagens" id="getAllPostagens" class="list-group-item list-group-item-action" aria-current="true">
+              Todas as postagens
+            </a>
+            <a href="https://www.google.com/" class="list-group-item list-group-item-action">Minhas postagens</a>
+          </div>
+
+          <li class="list-group-item text-beInc" (click)="getAllPostagens()">Todas as POSTAGENS</li>
+
+          <li class="list-group-item text-beInc">Minhas Postagens</li>  
+
       </div>
 
     </div>
