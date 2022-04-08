@@ -2,19 +2,23 @@
 
 .title-beInc {
     font-family: 'Text Me One', sans-serif;
-    font-size: 2.5em;
+    font-size: 52px;
     color: #8AB872;
 }
 
 .bg-color-beInc {
-    background-color: #8AB872;
+    background-color: #b2d3a7;
 }
 
 .text-beInc {
-    font-family: 'ABeeZee', sans-serif;
+    font-family: 'ABeeZee', sans-serif;    
 }
 
 .img-bg{
     overflow-x: hidden;
 }
 
+.home_buttons {     
+    display: flex;     
+    align-items: center;     
+    gap: 1.25rem; }
