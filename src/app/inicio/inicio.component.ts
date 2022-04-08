@@ -24,6 +24,8 @@ export class InicioComponent implements OnInit {
 
   user: Usuario = new Usuario()
   idUser = environment.id
+  foto = environment.foto
+  nome = environment.nome
 
   constructor(
     private router: Router,
