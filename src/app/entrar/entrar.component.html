@@ -40,47 +40,33 @@
     </div> -->
 <div class="container-fluid mt-3 mb-3">
   <div class="row col-md-12 d-flex justify-content-center">
-    <h1 class="text-center title-beInc font-weight-bold">BE INCLUSIVE</h1>
+    <h1 class="text-center title-beInc font-weight-bold ">BE INCLUSIVE</h1>
   </div>
 </div>
-<nav class="text-beInc font-weight-bold navbar navbar-expand-lg navbar-light bg-color-beInc mb-5">
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
+<nav class="text-beInc font-weight-bold navbar navbar-expand-lg navbar-light bg-color-beInc mb-5 sticky-top">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link text-dark" href="#"
-          >Home <span class="sr-only">(current)</span></a
-        >
+        <a class="nav-link text-dark" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-dark" href="#">Sobre nós</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="#">Como funciona?</a>
+        <a class="nav-link text-dark" href="#" routerLink="/como-funciona">Como funciona?</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="#">Contato</a>
+        <a class="nav-link text-dark" href="#contato" routerLink="/contato" >Contato</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <!-- Button trigger modal -->
-      <button
-        type="button"
-        class="btn btn-outline-light my-2 my-sm-0"
-        data-toggle="modal"
-        data-target="#modalEntrar"
-      >
+      <button type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target="#modalEntrar">
         Entrar
       </button>
     </form>
@@ -93,81 +79,43 @@
       <h4 class="d-flex align-items-center text-beInc">
         Construindo uma rede de apoio, e expandindo o acesso a saúde mental.
       </h4>
-      <a
-        class="btn btn-primary w-50 my-2 my-sm-0 mr-sm-2"
-        routerLink="/cadastrar"
-        data-dismiss="modal"
-        href="#"
-        role="button"
-        >Cadastre-se</a
-      >
+      <a class="btn btn-primary w-50 my-2 my-sm-0 mr-sm-2" routerLink="/cadastrar" data-dismiss="modal" href="#"
+        role="button">Cadastre-se</a>
     </div>
     <div class="col-md-8  img-bg d-flex justify-content-end" id="img-bg">
-      <img
-        class="imagem align-items-right mb-0"
-        src="../../assets/img/inicio2.png"
-        alt="imagem-fundo"
-      />
+      <img class="imagem align-items-right mb-0" src="../../assets/img/inicio2.png" alt="imagem-fundo" />
     </div>
     <div class="d-flex justify-content-center">
-      
+
     </div>
   </div>
 </div>
 
 <!-- Modal -->
-<div
-  class="modal fade"
-  id="modalEntrar"
-  tabindex="-1"
-  aria-labelledby="modalEntrarLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="modalEntrar" tabindex="-1" aria-labelledby="modalEntrarLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalEntrarLabel">Entrar</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-darktext-dark">
         <div class="form-group">
           <label for="usuario">Usuário</label>
-          <input
-            [(ngModel)]="usuarioLogin.email"
-            class="form-control"
-            type="text"
-            name="usuario"
-            id="usuario"
-            placeholder="Seu usuário"
-          />
+          <input [(ngModel)]="usuarioLogin.email" class="form-control" type="text" name="usuario" id="usuario"
+            placeholder="Seu usuário" />
         </div>
 
         <div class="form-group">
           <label for="senha">Senha</label>
-          <input
-            [(ngModel)]="usuarioLogin.senha"
-            class="form-control"
-            type="password"
-            name="senha"
-            id="senha"
-            placeholder="Sua senha"
-          />
+          <input [(ngModel)]="usuarioLogin.senha" class="form-control" type="password" name="senha" id="senha"
+            placeholder="Sua senha" />
         </div>
 
         <div class="d-flex justify-content-center">
-          <button
-            type="submit"
-            class="btn btn-success"
-            (click)="entrar()"
-            data-dismiss="modal"
-          >
+          <button type="submit" class="btn btn-success" (click)="entrar()" data-dismiss="modal">
             Entrar
           </button>
         </div>
@@ -182,5 +130,68 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6 d-flex justify-content-left vw-50">
+      <img class="imagem align-items-right mt-5" src="../../assets/img/sobre nos.png" alt="imagem-sobre-nos" />
+    </div>
+
+
+    <div class="col-md-6">
+
+      <h1 class="text-center title-beInc font-weight-bold ">Sobre nós</h1>
+
+      <h4 class="d-flex align-items-center text-beInc">
+        Somos uma rede social com o propósito de conectar psicólogos voluntários e pessoas de baixa renda que necessitam
+        de atendimento.
+        Construindo uma rede de apoio e expandindo o acesso à saúde mental. </h4>
+
+
+      <div class="col-md-6 d-flex justify-content-center">
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapsePaciente" role="button" aria-expanded="false"
+            aria-controls="collapsePaciente">
+            Para PACIENTES
+          </a>
+        </p>
+        <div class="collapse" id="collapsePaciente">
+
+          <!-- A PAGINA COMO FUNCIONA PACIENTE -->
+          <div class="card card-body">
+            PARA SER PACIENTE CADASTRA-SE ETC ETC IMAGENS
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 d-flex justify-content-center">
+        <p>
+          <a class="btn btn-primary" data-toggle="collapse" href="#collapseVoluntaries" role="button"
+            aria-expanded="false" aria-controls="collapseVoluntaries">
+            Para voluntaries
+          </a>
+        </p>
+        <div class="collapse" id="collapseVoluntaries">
+
+          <!-- A PAGINA COMO FUNCIONA VOLUNTARIES -->
+          <div class="card card-body">
+            PARA SER VOLUNTARIES
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+</div>
+
 <!-- </div> -->
 <!-- </div> -->
