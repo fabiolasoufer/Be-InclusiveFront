@@ -1,66 +1,119 @@
-<nav class="text-beInc font-weight-bold navbar navbar-expand-lg navbar-light bg-color-beInc sticky-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav
+  class="text-beInc font-weight-bold navbar navbar-expand-lg navbar-light bg-color-beInc sticky-top"
+>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#" routerLink="/entrar">
-                    Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Sobre nós</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#" routerLink="/como-funciona">Como funciona?</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#contato" routerLink="/contato">Contato</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal"
-                data-target="#modalEntrar">
-                Entrar
-            </button>
-        </form>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="#" routerLink="/entrar">
+          Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="#usuario">Sobre nós/ usuário</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="#voluntario">Sobre nós/ Voluntario</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="#" routerLink="/como-funciona"
+          >Como funciona?</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="#contato" routerLink="/contato"
+          >Contato</a
+        >
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-outline-light my-2 my-sm-0"
+        data-toggle="modal"
+        data-target="#modalEntrar"
+      >
+        Entrar
+      </button>
+    </form>
+  </div>
 </nav>
 
-
-
-<div class="container">
-    <div class="row d-flex align-items-center">
-        <div class="col-md-6">
-            <img class="align-items-right mt-5" width="600px" height="600px" src="../../assets/img/voluntario.png"
-                alt="imagem-voluntario">
-        </div>
-
-
-
-        <div class="col-md-6">
-
-            <h1 class="text-center title-beInc font-weight-bold ">Como ser um voluntarie</h1>
-
-            <h4 class="d-flex align-items-center text-beInc">
-                Explicacao de como ser um voluntrio.
-            </h4>
-
-            <h1 class="text-center title-beInc font-weight-bold ">Vantagens de ser um voluntarie</h1>
-
-            <ul class="text-beInc" >
-                <li>Valorização pelo mercado. </li>
-                <li>Ganho de experiência. </li>
-                <li>Possibilidade de fazer networking. </li>
-                <li>Chance de entrar em contato com outras pessoas e culturas. </li>
-                <li>Aperfeiçoamento acadêmico e profissional. </li>
-                <li>Aprimoramento de habilidades. </li>
-                <li>Desenvolvimento de ideias transformadoras. </li>
-                <li>Transformação pessoal.</li>
-            </ul>
-        </div>
+<div class="container-fluid">
+  <div class="row d-flex align-items-center" id="voluntario">
+    <div class="col-md-6">
+      <img
+        class="imagem"
+        width="500px"
+        height="500px"
+        src="../../assets/img/voluntario.png"
+        alt="imagem-voluntario"
+      />
     </div>
+
+    <div class="col-md-6">
+      <h2 class="text-center title-beInc font-weight-bold">
+        Como ser um voluntarie
+      </h2>
+
+      <h5 class="d-flex text-center align-items-center text-beInc">
+        Para ser voluntário, preencha o cadastro. Faça avaliações dos
+        participantes.Realize sessões periódicas. E com isso, evolua como
+        profissional!
+      </h5>
+
+      <h2 class="text-center title-beInc font-weight-bold mt-5">
+        Porque ser um voluntarie?
+      </h2>
+
+      <ul class="text-beInc">
+        <li>Valorização pelo mercado.</li>
+        <li>Ganho de experiência.</li>
+        <li>Possibilidade de fazer networking.</li>
+        <li>Chance de entrar em contato com outras pessoas e culturas.</li>
+        <li>Aperfeiçoamento acadêmico e profissional.</li>
+        <li>Aprimoramento de habilidades.</li>
+        <li>Desenvolvimento de ideias transformadoras.</li>
+        <li>Transformação pessoal.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-5 d-flex align-items-center">
+    <div class="col-md-6" id="usuario">
+      <h2 class="text-center title-beInc font-weight-bold">
+        Como ser um usuário
+      </h2>
+
+      <h5 class="d-flex text-center justify-content-center text-beInc">
+        Para ser usuário, preencha o cadastro. <br> Faça uma avaliação preliminar. <br>
+        Realize sessões periódicas.
+      </h5>
+
+      <h2 class="text-center title-beInc font-weight-bold mt-5">
+        Como participo? / E depois?
+      </h2>
+
+      <ul class="text-beInc">
+        <li>Mantenha a continuidade de suas sessões</li>
+        <li>Descubra novos hobbies</li>
+        <li>Compartilhe experiencias</li>
+        <li>Aumente sua rede de apoio</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <img class="imagem " src="../../assets/img/paciente-relogio.png" alt="" />
+    </div>
+  </div>
 </div>
