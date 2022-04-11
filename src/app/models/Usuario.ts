@@ -1,4 +1,5 @@
 import { PostagemModel } from "./PostagemModel"
+import { Tema } from "./Tema"
 
 export class Usuario {
     public id: number
@@ -7,5 +8,7 @@ export class Usuario {
     public senha: string
     public foto: string
     public categoria: string
+    public avaliacao: string
     public postagem: PostagemModel[]
+    public tema: Tema[]
 }
