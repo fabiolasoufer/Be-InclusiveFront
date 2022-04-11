@@ -1,53 +1,63 @@
 <div class="container-fluid">
 
-    <div class="row">
 
-        <div class="col-md-6" id="img-bg"></div>
+    <div class="row d-flex align-items-center">
+
+        <div class="col-md-6" id="img-bg">
+            <img
+            class="imagem"
+            width="50px"
+            height="50px"
+            src="../../assets/img/cadastro.png"
+            alt="imagem-cadastro"
+          />
+        </div>
 
         <div class="col-md-6 mt-5 mb-5">
 
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12">
 
-                    <h1 class="text-center">Cadastro</h1>
+                    <h1 class="text-center title-beInc font-weight-bold d-flex flex-start">BE INCLUSIVE</h1>
+                    <h3 class="text-beInc">Cadastre-se</h3>
 
                     <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+                        <label class="text-beInc" for="nome">Nome</label>
+                        <input [(ngModel)]="usuario.nome" class="form-control text-beInc" type="text" name="nome" id="nome" placeholder="Seu nome">
                     </div>
 
                     <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input [(ngModel)]="usuario.email" class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
+                        <label class="text-beInc" for="usuario">Usuário</label>
+                        <input [(ngModel)]="usuario.email" class="form-control text-beInc" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
                     </div>
 
                     <div class="form-group">
-                        <label for="foto">Link da foto</label>
-                        <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                        <label class="text-beInc" for="foto">Link da foto</label>
+                        <input [(ngModel)]="usuario.foto" class="form-control text-beInc" type="text" name="foto" id="foto" placeholder="Link da sua foto">
                     </div>
 
                     <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input (input)="confirmaSenha($event)" class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
+                        <label class="text-beInc" for="senha">Senha</label>
+                        <input (input)="confirmaSenha($event)" class="form-control text-beInc" type="password" name="senha" id="senha" placeholder="Sua senha">
                     </div>
 
                     <div class="form-group">
-                        <label for="confirmaSenha">Confirmar Senha</label>
-                        <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmaSenha" id="confirmaSenha"
+                        <label class="text-beInc" for="confirmaSenha">Confirmar Senha</label>
+                        <input [(ngModel)]="usuario.senha" class="form-control text-beInc" type="password" name="confirmaSenha" id="confirmaSenha"
                             placeholder="Confirmar senha">
                     </div>
 
                     <div class="form-group">
-                        <label for="tipo">Tipo de usuário</label>
-                        <select class="form-control" name="tipo" id="tipo"(change)="tipoUsuarios($event)">
+                        <label class="text-beInc" for="tipo">Tipo de usuário</label>
+                        <select class="form-control text-beInc" name="tipo" id="tipo"(change)="tipoUsuarios($event)">
                             <option>Selecione um tipo de usuário</option>
                             <option value="PACIENTE">Paciente</option>
                             <option value="VOLUNTARIO">Voluntário</option>
                         </select>
                     </div>
 
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class=" btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
+                    <div class="d-flex justify-content-center text-beInc">
+                        <button type="submit" class=" btn btn-secondary mr-4" routerLink="/entrar">Cancelar</button>
                         <button type="submit" class=" btn btn-success" (click)="cadastrar()">Cadastrar</button>
                     </div>
 
