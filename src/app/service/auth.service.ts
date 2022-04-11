@@ -46,7 +46,12 @@ logado(){
   if (environment.token != ''){
     ok = true
   }
-  return ok 
+  return ok
+}
+
+getAllUsuarios(): Observable<Usuario[]>{
+  return this.http.get<Usuario[]>('https://projetobeinclusive.herokuapp.com/usuarios/all', this.token)
 }
 
 }
+
