@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Usuario } from '../models/Usuario';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,9 +14,11 @@ export class MenuComponent implements OnInit {
   nome = environment.nome
   foto = environment.foto
   idUsuario = environment.id
-  
+  listaUsuarios: Usuario[]
+
   constructor(
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) { }
 
   ngOnInit(){
@@ -27,4 +31,11 @@ export class MenuComponent implements OnInit {
     environment.id = 0
 
 }
+
+getAllUsuarios(){
+  this.authService.getAllUsuarios().subscribe((resp: Usuario[])=> {
+    this.listaUsuarios = resp
+  })
+}
+
 }
