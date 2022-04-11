@@ -288,8 +288,72 @@
             >Minhas postagens</a
           >
         </div>
+        <div class="card d-flex flex-wrap justify-content-center text-beInc">
+          <h5 class="card-header bg-top mt-2 mb-1 text-beInc ">Usuários</h5>
+            <ul class="list-group m-0 rounded" *ngFor="let item of listaUsuarios">
+              <li class="text-beInc list-group-item " *ngIf="item.id != idUser">
+                <h6><img class="rounded-circle" src="{{item.foto}}" onerror=" this.src = 'https://media.istockphoto.com/vectors/profile-placeholder-image-gray-silhouette-no-photo-vector-id1016744034?k=20&m=1016744034&s=170667a&w=0&h=JlerB4H3IeLolDMQOYiAF9uLuZeW0bs4jH6NdrNPDtE='"
+                  width="33px"
+                  height="33px" alt="Foto do perfil de: {{item.nome}}">
+                {{item.nome}}
+                <small class="text-info" *ngIf="item.categoria == 'VOLUNTARIO'">Voluntário</small>
+                </h6>
+                <a *ngIf="item.categoria == 'PACIENTE'" class="btn btn-outline-success" data-toggle="modal" data-target="#mudarAvaliacao" href=""><small> Mudar Avaliação</small></a>
+              </li>
+            </ul>
+        </div>
       </div>
+      
     </div>
     <!-- ! /Coluna de Opções -->
   </div>
 </div>
+
+<div
+        class="modal fade"
+        id="mudarAvaliacao"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Mudar Avaliação
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="nome">Nome: {{user.nome}}</label>
+              </div>
+              <div class="form-group">
+                <label for="tipo">Tipo de usuário: {{user.categoria}}</label>
+            </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Cancelar
+              </button>
+              <button
+                type="button"
+                class="btn btn-success"
+                (click)="atualizarAvaliacao()"
+                data-dismiss="modal"
+              >
+                Publicar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>

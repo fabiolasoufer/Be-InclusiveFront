@@ -35,11 +35,18 @@ atualizarUsuario(usuario: Usuario): Observable<Usuario>{
   return this.http.put<Usuario>('https://projetobeinclusive.herokuapp.com/usuarios/atualizar', usuario, this.token)
 }
 
+mudarAvaliacao(usuario: Usuario): Observable<Usuario>{
+  return this.http.put<Usuario>('https://projetobeinclusive.herokuapp.com/usuarios/atualizar', usuario, this.token)
+}
+
 
 getByIdUsuario(id: number): Observable<Usuario>{
   return this.http.get<Usuario>(`https://projetobeinclusive.herokuapp.com/usuarios/${id}`, this.token)
 }
 
+getAllUsuarios(): Observable<Usuario[]>{
+  return this.http.get<Usuario[]>('https://projetobeinclusive.herokuapp.com/usuarios/all', this.token)
+}
 
 logado(){
   let ok: boolean = false
@@ -47,10 +54,6 @@ logado(){
     ok = true
   }
   return ok
-}
-
-getAllUsuarios(): Observable<Usuario[]>{
-  return this.http.get<Usuario[]>('https://projetobeinclusive.herokuapp.com/usuarios/all', this.token)
 }
 
 }

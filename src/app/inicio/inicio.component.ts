@@ -26,7 +26,9 @@ export class InicioComponent implements OnInit {
   idUser = environment.id
   foto = environment.foto
   nome = environment.nome
+  tipo = environment.categoria
   avaliacao = environment.avaliacao
+  listaUsuarios: Usuario[]
 
   constructor(
     private router: Router,
@@ -45,6 +47,7 @@ export class InicioComponent implements OnInit {
     this.authService.refreshToken()
     this.getAllTemas()
     this.getAllPostagens()
+    this.findAllUsuarios()
     this.findByIdUsuario()
   }
 
@@ -72,6 +75,12 @@ export class InicioComponent implements OnInit {
     })
   }
 
+  findAllUsuarios(){
+    this.authService.getAllUsuarios().subscribe((resp: Usuario[]) =>{
+      this.listaUsuarios = resp
+    })
+  }
+
   publicar(){
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
@@ -84,6 +93,12 @@ export class InicioComponent implements OnInit {
       alert("Postagem realizada com sucesso!")
       this.postagem = new PostagemModel()
       this.getAllPostagens()
+    })
+  }
+
+  atualizarAvaliacao(){
+    this.authService.mudarAvaliacao(this.user).subscribe((resp: Usuario) =>{
+      this.user = resp
     })
   }
 
