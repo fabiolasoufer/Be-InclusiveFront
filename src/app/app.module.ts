@@ -18,6 +18,7 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { ContatoComponent } from './contato/contato.component';
 import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
+import { HobbyComponent } from './hobby/hobby.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
     PostagemDeleteComponent,
     UsuarioEditComponent,
     ContatoComponent,
-    ComoFuncionaComponent
+    ComoFuncionaComponent,
+    HobbyComponent
   ],
   imports: [
     BrowserModule,
