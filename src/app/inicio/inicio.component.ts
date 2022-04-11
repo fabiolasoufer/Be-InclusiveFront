@@ -48,6 +48,7 @@ export class InicioComponent implements OnInit {
     this.getAllTemas()
     this.getAllPostagens()
     this.findAllUsuarios()
+    this.findByIdUsuario()
   }
 
   getAllTemas(){
@@ -94,8 +95,6 @@ export class InicioComponent implements OnInit {
       this.getAllPostagens()
     })
   }
-
-  // a function that only updates user.avaliacao
 
   atualizarAvaliacao(){
     this.authService.mudarAvaliacao(this.user).subscribe((resp: Usuario) =>{

@@ -53,7 +53,8 @@ logado(){
   if (environment.token != ''){
     ok = true
   }
-  return ok 
+  return ok
 }
 
 }
+

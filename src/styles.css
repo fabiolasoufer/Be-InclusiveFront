@@ -17,6 +17,10 @@ body {
   font-size: 18pt;
 }
 
+.fs-60 {
+  font-size: 14pt;
+}
+
 .title-beInc {
   font-family: "Text Me One", sans-serif;
   font-size: 52px;
@@ -29,6 +33,13 @@ body {
 
 .bg-top{
     background-color: #b0d497 !important;
+}
+
+.button{
+  background-color: #b0d497 !important;
+  font-family: "Text Me One", sans-serif;
+  font-size: 52px;
+  color: #000000;
 }
 
 #bg-color-beInc2 {
