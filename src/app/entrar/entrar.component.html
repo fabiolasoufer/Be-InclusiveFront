@@ -73,13 +73,13 @@
   </div>
 </nav>
 
-<div class="container mt-5">
+<div class="container-fluid vh-75 mt-5">
   <div class="row d-flex">
     <div class="col-md-4 d-flex flex-column justify-content-center">
       <h4 class="d-flex align-items-center text-beInc">
         Construindo uma rede de apoio, e expandindo o acesso a saúde mental.
       </h4>
-      <a class="btn button font-weight-bold w-50 my-2 my-sm-0 mr-sm-2" routerLink="/cadastrar" data-dismiss="modal" href="#"
+      <a class="btn button font-weight-bold w-50 my-2 my-sm-0 mr-sm-2 d-flex align-content-start" routerLink="/cadastrar" data-dismiss="modal" href="#"
         role="button">Cadastre-se</a>
     </div>
     <div class="col-md-8  img-bg d-flex justify-content-end" id="img-bg">
@@ -93,22 +93,22 @@
 
 <!-- Modal -->
 <div class="modal fade" id="modalEntrar" tabindex="-1" aria-labelledby="modalEntrarLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog shadow p-1 mb-5 bg-transparent rounded">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalEntrarLabel">Entrar</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-darktext-dark">
-        <div class="form-group">
+      <div class="modal-body">
+        <div class="form-group ml-5 mr-5">
           <label for="usuario">Usuário</label>
           <input [(ngModel)]="usuarioLogin.email" class="form-control" type="text" name="usuario" id="usuario"
-            placeholder="Seu usuário" />
+            placeholder="Seu E-mail" />
         </div>
 
-        <div class="form-group">
+        <div class="form-group ml-5 mr-5">
           <label for="senha">Senha</label>
           <input [(ngModel)]="usuarioLogin.senha" class="form-control" type="password" name="senha" id="senha"
             placeholder="Sua senha" />
@@ -131,7 +131,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
 
     <div class="col-md-6 d-flex justify-content-left vw-50">
@@ -139,9 +139,9 @@
     </div>
 
 
-    <div class="col-md-6 mt-5">
+    <div class="col-md-6 mt-5" id="sobre">
 
-      <h1 class="text-center title-beInc font-weight-bold mt-5 " id="sobre">Sobre nós</h1>
+      <h1 class="text-center title-beInc font-weight-bold mt-5  d-flex justify-content-start" >Sobre nós</h1>
 
       <h4 class="d-flex align-items-center text-beInc">
         Somos uma rede social com o propósito de conectar psicólogos voluntários e pessoas de baixa renda que necessitam
@@ -150,7 +150,7 @@
 
         <!-- btn button font-weight-bold -->
 
-      <div class="col-md-6 d-flex justify-content-center mt-5">
+      <div class="col-md-6 d-flex justify-content-start mt-3">
         <!-- <p>
           <a class="btn btn-primary" data-toggle="collapse" href="#collapsePaciente" role="button" aria-expanded="false"
             aria-controls="collapsePaciente">

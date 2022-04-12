@@ -96,7 +96,12 @@ export class InicioComponent implements OnInit {
     })
   }
 
+  avaliacaoUsuario(event: any) {
+    this.avaliacao = event.target.value
+  }
+
   atualizarAvaliacao(){
+    this.user.avaliacao = this.avaliacao
     this.authService.mudarAvaliacao(this.user).subscribe((resp: Usuario) =>{
       this.user = resp
     })
