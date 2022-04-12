@@ -40,33 +40,53 @@
     </div> -->
 <div class="container-fluid mt-3 mb-3">
   <div class="row col-md-12 d-flex justify-content-center">
-    <h1 class="text-center title-beInc font-weight-bold ">BE INCLUSIVE</h1>
+    <h1 class="text-center title-beInc font-weight-bold">BE INCLUSIVE</h1>
   </div>
 </div>
-<nav class="text-beInc font-weight-bold navbar navbar-expand-lg navbar-light bg-color-beInc mb-5 sticky-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav
+  class="text-beInc font-weight-bold navbar navbar-expand-lg navbar-light bg-color-beInc mb-5 sticky-top"
+>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link text-dark" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-dark" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
       </li>
       <li class="nav-item">
         <a class="nav-link text-dark" href="#sobre">Sobre nós</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="#" routerLink="/como-funciona">Como funciona?</a>
+        <a class="nav-link text-dark" href="#" routerLink="/como-funciona"
+          >Como funciona?</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="#contato" routerLink="/contato" >Contato</a>
+        <a class="nav-link text-dark" href="#contato" routerLink="/contato"
+          >Contato</a
+        >
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-outline-light my-2 my-sm-0" data-toggle="modal" data-target="#modalEntrar">
+      <button
+        type="button"
+        class="btn btn-outline-light my-2 my-sm-0"
+        data-toggle="modal"
+        data-target="#modalEntrar"
+      >
         Entrar
       </button>
     </form>
@@ -79,43 +99,79 @@
       <h4 class="d-flex align-items-center text-beInc">
         Construindo uma rede de apoio, e expandindo o acesso a saúde mental.
       </h4>
-      <a class="btn button font-weight-bold w-50 my-2 my-sm-0 mr-sm-2 d-flex align-content-start" routerLink="/cadastrar" data-dismiss="modal" href="#"
-        role="button">Cadastre-se</a>
+      <a
+        class="btn button font-weight-bold w-50 my-2 my-sm-0 mr-sm-2 d-flex align-content-start justify-content-center"
+        routerLink="/cadastrar"
+        data-dismiss="modal"
+        href="#"
+        role="button"
+        >Cadastre-se</a
+      >
     </div>
-    <div class="col-md-8  img-bg d-flex justify-content-end" id="img-bg">
-      <img class="imagem align-items-right mb-0" src="../../assets/img/inicio2.png" alt="imagem-fundo" />
+    <div class="col-md-8 img-bg d-flex justify-content-end" id="img-bg">
+      <img
+        class="imagem align-items-right mb-0"
+        src="../../assets/img/inicio2.png"
+        alt="imagem-fundo"
+      />
     </div>
-    <div class="d-flex justify-content-center">
-
-    </div>
+    <div class="d-flex justify-content-center"></div>
   </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="modalEntrar" tabindex="-1" aria-labelledby="modalEntrarLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="modalEntrar"
+  tabindex="-1"
+  aria-labelledby="modalEntrarLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog shadow p-1 mb-5 bg-transparent rounded">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalEntrarLabel">Entrar</h5>
-        <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close text-danger"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class="form-group ml-5 mr-5">
-          <label for="usuario">Usuário</label>
-          <input [(ngModel)]="usuarioLogin.email" class="form-control" type="text" name="usuario" id="usuario"
-            placeholder="Seu E-mail" />
+          <label for="usuario">E-mail</label>
+          <input
+            [(ngModel)]="usuarioLogin.email"
+            class="form-control"
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Seu E-mail"
+          />
         </div>
 
         <div class="form-group ml-5 mr-5">
           <label for="senha">Senha</label>
-          <input [(ngModel)]="usuarioLogin.senha" class="form-control" type="password" name="senha" id="senha"
-            placeholder="Sua senha" />
+          <input
+            [(ngModel)]="usuarioLogin.senha"
+            class="form-control"
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="Sua senha"
+          />
         </div>
 
         <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-success" (click)="entrar()" data-dismiss="modal">
+          <button
+            type="submit"
+            class="btn btn-success"
+            (click)="entrar()"
+            data-dismiss="modal"
+          >
             Entrar
           </button>
         </div>
@@ -133,22 +189,28 @@
 
 <div class="container-fluid">
   <div class="row">
-
     <div class="col-md-6 d-flex justify-content-left vw-50">
-      <img class="imagem align-items-right mt-5" src="../../assets/img/sobre nos.png" alt="imagem-sobre-nos" />
+      <img
+        class="imagem align-items-right mt-5"
+        src="../../assets/img/sobre nos.png"
+        alt="imagem-sobre-nos"
+      />
     </div>
 
-
-    <div class="col-md-6 mt-5" id="sobre">
-
-      <h1 class="text-center title-beInc font-weight-bold mt-5  d-flex justify-content-start" >Sobre nós</h1>
+    <div class="col-md-6" id="sobre">
+      <h1
+        class="text-center title-beInc font-weight-bold mt-5 d-flex justify-content-start"
+      >
+        Sobre nós
+      </h1>
 
       <h4 class="d-flex align-items-center text-beInc">
-        Somos uma rede social com o propósito de conectar psicólogos voluntários e pessoas de baixa renda que necessitam
-        de atendimento.
-        Construindo uma rede de apoio e expandindo o acesso à saúde mental. </h4>
+        Somos uma rede social com o propósito de conectar psicólogos voluntários
+        e pessoas de baixa renda que necessitam de atendimento. Construindo uma
+        rede de apoio e expandindo o acesso à saúde mental.
+      </h4>
 
-        <!-- btn button font-weight-bold -->
+      <!-- btn button font-weight-bold -->
 
       <div class="col-md-6 d-flex justify-content-start mt-3">
         <!-- <p>
@@ -184,18 +246,18 @@
 
       </div> -->
 
-
-      <a class="btn button font-weight-bold w-50 my-2 my-sm-0 mr-sm-2" routerLink="/como-funciona" data-dismiss="modal" href="#"
-        role="button">Saiba mais</a>
-
+        <a
+          class="btn button font-weight-bold w-50 my-2 my-sm-0 mr-sm-2"
+          routerLink="/como-funciona"
+          data-dismiss="modal"
+          href="#"
+          role="button"
+          >Saiba mais</a
+        >
+      </div>
     </div>
-
-
   </div>
 
-
-
+  <!-- </div> -->
+  <!-- </div> -->
 </div>
-
-<!-- </div> -->
-<!-- </div> -->

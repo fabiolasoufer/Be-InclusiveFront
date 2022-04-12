@@ -23,6 +23,7 @@ export class InicioComponent implements OnInit {
   idTema:number
 
   user: Usuario = new Usuario()
+  userAvaliacao: Usuario = new Usuario()
   idUser = environment.id
   foto = environment.foto
   nome = environment.nome
@@ -100,10 +101,16 @@ export class InicioComponent implements OnInit {
     this.avaliacao = event.target.value
   }
 
+  buscarUser(id: number){
+    this.authService.getByIdUsuario(id).subscribe((resp: Usuario) => {
+      this.userAvaliacao = resp
+    })
+  }
+
   atualizarAvaliacao(){
-    this.user.avaliacao = this.avaliacao
-    this.authService.mudarAvaliacao(this.user).subscribe((resp: Usuario) =>{
-      this.user = resp
+    this.userAvaliacao.avaliacao = this.avaliacao
+    this.authService.mudarAvaliacao(this.userAvaliacao).subscribe((resp: Usuario) =>{
+      this.userAvaliacao = resp
     })
   }
 
