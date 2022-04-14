@@ -64,7 +64,7 @@
             <div *ngIf="user.categoria == 'PACIENTE'"
               class="mt-5 card-columns d-flex justify-content-center flex-wrap border-md"
             >
-              <ng-container *ngFor="let item of listaPostagens">
+              <ng-container *ngFor="let item of listaPostagens | orderBy : key : reverse">
                 <div
                   class="card text-center"
                   *ngIf="item.tema.avaliacao == user.avaliacao"
@@ -95,11 +95,10 @@
                 </div>
               </ng-container>
             </div>
-           
             <div *ngIf="user.categoria == 'VOLUNTARIO'"
               class="mt-5 card-columns d-flex justify-content-center flex-wrap border-md"
             >
-              <ng-container *ngFor="let item of listaPostagens">
+              <ng-container *ngFor="let item of listaPostagens | orderBy : key : reverse">
                 <div
                   class="card text-center"
                 
@@ -155,15 +154,15 @@
                     Tema: {{ item.tema.avaliacao }}</small
                   > -->
                   <p class="card-text mt-3">{{ item.descricao }}</p>
+                  <p *ngIf="user.categoria == 'VOLUNTARIO'" class="card-text mt-3">{{ item.tema.avaliacao }}</p>
                   <p class="card-text">
                     <small class="text-muted"
                       >{{ item.date | date: "dd/MM/yyyy" }} às
                       {{ item.date | date: "HH:mm" }}</small
                     >
                   </p>
-                  <p class="card-text">
-                    <small class="text-muted">{{ user.nome }}</small>
-                  </p>
+                  <a [routerLink]="['/postagem-edit',item.id]" class="text-info mr-3" href="">Editar</a>
+                  <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
                 </div>
               </div>
             </div>
@@ -219,10 +218,7 @@
 
               <div class="form-group">
                 <label for="tema"
-                  >Escolha um tema ou
-                  <a data-dismiss="modal" routerLink="/tema">
-                    cadastre um novo</a
-                  >:
+                  >Escolha um tema
                 </label>
                 <select
                   name="tema"
@@ -271,6 +267,7 @@
             aria-controls="todasPostagens"
             aria-selected="true"
             id="getAllPostagens"
+            (click)="getAllPostagens()"
             class="list-group-item list-group-item-action text-beInc"
             aria-current="true"
           >

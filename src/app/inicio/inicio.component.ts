@@ -31,6 +31,9 @@ export class InicioComponent implements OnInit {
   avaliacao = environment.avaliacao
   listaUsuarios: Usuario[]
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -98,7 +101,7 @@ export class InicioComponent implements OnInit {
   }
 
   avaliacaoUsuario(event: any) {
-    this.avaliacao = event.target.value
+    this.userAvaliacao = event.target.value
   }
 
   buscarUser(id: number){
@@ -111,6 +114,8 @@ export class InicioComponent implements OnInit {
     this.userAvaliacao.avaliacao = this.avaliacao
     this.authService.mudarAvaliacao(this.userAvaliacao).subscribe((resp: Usuario) =>{
       this.userAvaliacao = resp
+      alert("Avaliação alterada com sucesso!")
+      this.findAllUsuarios
     })
   }
 
