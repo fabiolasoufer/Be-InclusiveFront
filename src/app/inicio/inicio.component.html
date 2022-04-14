@@ -140,7 +140,7 @@
             <div
               class="mt-5 card-columns d-flex justify-content-center flex-wrap border-md"
             >
-              <div class="card text-center" *ngFor="let item of user.postagem">
+              <div class="card text-center" *ngFor="let item of user.postagem | orderBy : key : reverse">
                 <div class="card-body">
                   <img
                     src="{{ foto }}"

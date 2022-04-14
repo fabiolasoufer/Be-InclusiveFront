@@ -101,7 +101,7 @@ export class InicioComponent implements OnInit {
   }
 
   avaliacaoUsuario(event: any) {
-    this.userAvaliacao = event.target.value
+    this.avaliacao = event.target.value
   }
 
   buscarUser(id: number){
@@ -115,7 +115,7 @@ export class InicioComponent implements OnInit {
     this.authService.mudarAvaliacao(this.userAvaliacao).subscribe((resp: Usuario) =>{
       this.userAvaliacao = resp
       alert("Avaliação alterada com sucesso!")
-      this.findAllUsuarios
+      this.findAllUsuarios()
     })
   }
 
